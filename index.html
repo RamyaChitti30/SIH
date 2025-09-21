@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AgriAdvisor — Demo</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+<header>
+<div class="lang-row">
+<label data-i18n="select_language">Select language</label>
+<select id="langSelect" aria-label="Language selector"></select>
+</div>
+</header>
+
+
+<main>
+<section id="loginSection" class="card">
+<h2 data-i18n="login_title">Login / मोबाइल लॉगिन</h2>
+<label data-i18n="label_name">Name</label>
+<input id="name" type="text" placeholder="" data-i18n-placeholder="ph_name" />
+
+
+<label data-i18n="label_phone">Phone number</label>
+<input id="phone" type="tel" placeholder="+91XXXXXXXXXX" />
+
+
+<button id="sendOtpBtn" data-i18n="btn_send_otp">Send OTP</button>
+
+
+<div id="otpArea" style="display:none; margin-top:10px;">
+<label data-i18n="label_otp">Enter OTP</label>
+<input id="otpInput" type="text" maxlength="6" />
+<button id="verifyOtpBtn" data-i18n="btn_verify_otp">Verify</button>
+</div>
+
+
+<p id="loginStatus"></p>
+</section>
+
+
+<section id="appSection" class="card hidden">
+<h2 data-i18n="app_title">Crop Advisory</h2>
+
+
+<div class="row">
+<div class="col">
+<label data-i18n="label_crop_type">Crop category</label>
+<select id="cropCategory"></select>
+
+
+<label data-i18n="label_crop_variety">Crop variety</label>
+<select id="cropVariety"></select>
+
+
+<label data-i18n="label_location">Location (lat,lon)</label>
+<input id="location" placeholder="13.0827,80.2707" />
+
+
+<button id="loadWeather" data-i18n="btn_get_weather">Get weather & suitability</button>
+
+
+<div id="weatherResult" class="box"></div>
+</html>
